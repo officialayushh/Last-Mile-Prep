@@ -20,6 +20,7 @@ console.log(iAmStandBy);
 console.log(typeof(iAmStandBy));
 
 
+// What is javascript ?
 // What is hoisting ?
 // Javascript is Synchronous or Asynchrous or why ?
 // Difference between let,var,const ?
