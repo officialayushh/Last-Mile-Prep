@@ -21,3 +21,12 @@ console.log(typeof(iAmStandBy));
 
 
 // What is hoisting ?
+// Javascript is Synchronous or Asynchrous or why ?
+// Difference between let,var,const ?
+// What is Closures ?
+// Event Loop ?
+// console.log("1");
+// setTimeout(()=>{
+//     console.log("0");
+// }, 0);
+// console.log("2");
