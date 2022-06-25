@@ -31,3 +31,6 @@ console.log(typeof(iAmStandBy));
 //     console.log("0");
 // }, 0);
 // console.log("2");
+
+
+// Browser Understand only javascript then how to know react codes ?
