@@ -34,3 +34,24 @@ console.log(typeof(iAmStandBy));
 
 
 // Browser Understand only javascript then how to know react codes ?
+
+
+
+
+// React
+
+
+// What is React ?
+// Hooks ?
+// UseEffect and usestate and states ?
+// Difference between function and class components ?
+// How many types of component ?
+// What is jsx ?
+// How we use hooks in class component ?
+// H.O.C -> Higher Order Component and pure components,
+// UseMemo
+// Redux Working ?
+// MiddleWare 
+// Redux Thunk
+// How redux Flow ?
+
