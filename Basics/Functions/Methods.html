@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Methods of Function</title>
+</head>
+<body>
+    <!-- This Keyword => Reuse functions in different execution contexts. It means, a function once defined can be invoked for different objects using the this keyword.
+         Identifying the object in the current execution context when we invoke a method -->
+
+    <!-- 
+        1:-Call();
+        => This method will used to two functions and interact
+        function.call(thisArg,arg1,arg2,.....,argn)
+
+        2:-apply();
+        => It is used yo call a function contains this value and a single
+        array of arguments.
+        Difference of apply and call is not pass differnet parameter in apply hum unko array m lekar phir pass karte hai,
+        parameter m ke taur p koi array pass karna hota h then we apply array.
+        function.apply(thisArg,[array])
+
+        3:-bind();
+        => It is used to create a new function.when a function is called,it has own this keyword
+        set to the provided value,with a given sequence of arguments.
+        function.bind(thisArg[,arg1[,arg2[,...]]])
+
+        4:-toString();
+        => it returns the result in a form of a string.
+        function.toString();
+    -->
+    <script>
+        // 1:-
+        function Emp(id,name) {
+            this.id = id;
+            this.name = name;
+        }
+        function PermanentEmp(id,name){
+            Emp.call(this,id,name);
+        }
+        function TemporalEmp(id,name){
+            Emp.call(this,id,name);
+        }
+        // 1st Type:-
+        var pEmp = new PermanentEmp(1,"Ayush");
+        var tEmp = new TemporalEmp(2,"Shivam");
+        document.writeln(pEmp.id + " " +pEmp.name);
+        document.writeln(tEmp.id + " " +tEmp.name);
+        // 2nd Type:-
+        // document.writeln(new PermanentEmp(1,"Ayush").id);
+        // document.writeln(new TemporalEmp(8,"Ayush").id);
+
+
+        // 2:-
+        var arr = [2,8,6,3];
+        const number = Math.max.apply(null,arr);
+        document.writeln(number);
+        // for 2 arrays:-
+        var array = [1,2,3,4];
+        var newarr = [5,6,7,8];
+        // Two things are there in javascript push and pull adn real meaning to that.
+        array.push.apply(array,newarr);
+        document.write("<br>");
+        for(value of array){
+            document.writeln(value);
+        }
+        document.write("<br>");
+
+
+        // 3:-
+        var website = {
+            name:"js",
+            getname : function() {
+                return this.name;
+            }
+        }
+
+        var website2 = {
+            name:"Html",
+            getname : function() {
+                return this.name;
+            }
+        }
+
+        var unboundGet = website.getname;
+        var boundGet = unboundGet.bind(website2);
+        // document.write(website.getname());
+        document.write(boundGet());
+        // kisi ek object ko m variable m store kar rha hu,
+        document.write("<br>");
+
+
+        // 4:-
+        function add(a,b) {
+            return a+b;
+        }
+        document.writeln(add(10,20).toString());
+    </script>
+</body>
+</html>

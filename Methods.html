@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Methods</title>
+</head>
+<body>
+    <!-- 
+        1- Object.assign()
+        2- Object.create()
+        3- freeze()
+        4- is()
+        5- isExtensible()
+        6- isFrozen()
+        7- isSealed()
+        8- seal()
+        9- values()
+    -->
+    <script>
+    //  1:- const obj1 = {
+        //     a:1,
+        //     b:2,
+        //     c:3
+        // }
+        // const obj2 = {
+        //     d:4,
+        //     e:5,
+        //     f:6
+        // }
+        // const obj3 = Object.assign({c:6,d:8},obj1); Only one assigned beacuse it created new value always.
+        // const obj3 = Object.assign({g:6,h:8},obj1); Both Assigned
+        // console.log(obj1,obj3);
+
+    //  2:- 
+    // function fruit() {
+    //     this.name = "Grapes";
+    // }
+    // function fun() {
+    //     fruit.call(this);
+    // }
+    // fun.prototype = Object.create(fruit.prototype); //Create a New Object
+    // const app = new fun();
+    // console.log(app);
+
+
+    // 3:- Privacy kardega ye kisi bhi chizz ke liye,Locked can't changed.
+    // const obj1 = {
+    //     fname: "Ayush",
+    //     age:23
+    // }
+    // const obj2 = Object.freeze(obj1);
+    // obj2.age = 32;
+    // console.log(obj2.age);
+
+
+    // 4:- Compare
+    // const obj1 = {
+       
+    // }
+    // const obj2 = {
+      
+    // }
+
+    // console.log(Object.is(obj1,obj2));
+
+
+    // 5:- 
+    // const obj1 = {
+       
+    // }
+    // console.log(Object.isExtensible(obj1));
+    // console.log(Object.is(obj1));
+
+
+    // 6,7,8:- Object is packed this can't be deleted.
+    // const obj1 = {
+    //     fname: "Abc",
+    // }
+    // const obj2 = Object.seal(obj1);
+    // const prev = obj2.fname = "ayush";
+    // console.log(prev);
+    // delete prev;
+    // console.log(prev);
+
+    // console.log(Object.isSealed(obj2));
+    // console.log(Object.isSealed(obj1));
+
+
+    // 9:-
+    const obj1 = {
+        fname: "Ayush",
+        age : 23,
+        college: true
+    }
+    console.log(Object.values(obj1));
+    </script>
+</body>
+</html>

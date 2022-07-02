@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops</title>
+</head>
+<body>
+    <script>
+        // Loops
+        // 1:- for Loop
+        for(let i=1;i<=6;i++){
+            document.writeln(i);
+        }
+        document.write("<br>");
+        // 2:- while Loop - According to requirement if you not want such a things
+        var  i=1;
+        while(i<=10){
+            document.writeln(i);
+            i++;
+        }
+        document.write("<br>");
+        // 3:- do-while Loop
+        var a = 1;
+        do{
+            document.write(a);
+            a++;
+        }while(a<=8);
+        document.write("<br>");
+        // 4:- for-in Loop
+        // Mainly make this loop to objects,
+        var person={fname:"Ayush",lname:"Saraswat",age:19};
+        var temp = "";
+        for(value in person){
+            temp= temp + person[value] + " ";
+            // document.writeln(person[value]);
+        }
+        document.write(temp);
+        document.write("<br>");
+        // 5:- for-of Loop
+        // Used in Most Cases Array and String 
+        // As a Array
+        var alphabets = ["A","B","C","D"];
+        for(value of alphabets){
+            document.write(value);
+        }
+        document.write("<br>");
+        for(let i=0;i<=alphabets.length-1;i++){
+            document.write(alphabets[i]);
+        }
+        document.write("<br>");
+        // As a String
+        var y = "Ayush";
+        for(value of y){
+            document.write(value+"<br>");
+        }
+        
+    </script>
+</body>
+</html>

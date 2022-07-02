@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+</head>
+<body>
+    <!-- Let,Var,Const -->
+    <!-- Var => 2015 se pehle only way tha describe karne ka-->
+    <!-- let =>  -->
+    <!-- Const =>  -->
+    <!-- {}=> This is Called scope -->
+    <script type="text/javascript">
+        document.write("Hii My Name is Ayush"); // Document is an object to access anything in our body we use document.
+        // In var both out of scope and in scope access but in let only inside scope will access and in const can't change its initial value.
+        // One more thing to learn agar js m koi error ajay to uske bad vala code excute nahi hoga agar execution karvana h to remove it
+        {
+            var think = "Ayush";
+            document.write("<br>");
+            document.write(think);
+            document.write("<br>");
+        }
+        document.write(think);
+
+        var x = 10; //For Globally initiated give outside.
+        function abc() { //This is locally initialization.
+            var x = 10;
+            document.write(x);
+        }
+        abc();
+        document.write("<br>");
+
+        // Global variable
+        // Window.xyz kuch bhi de sakte h only variable nahi dena h bas,
+        function xyz() {
+            // var x = "variable";
+            window.value = "this is a variable";
+            document.write("<br>");
+            document.write(window.value);
+        }
+        xyz();
+        mno();
+
+        document.write(window.value); // Accessible outside Also,
+
+        function mno() {
+            document.write("<br>");
+            document.write(window.value);
+        }
+
+    </script>
+</body>
+</html>

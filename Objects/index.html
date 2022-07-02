@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Objects - Methods in Objects</title>
+</head>
+<body>
+    <!-- 
+        -> A Javascript objects is an entity having state and behaviour (properties and method).
+        For Ex:- car,prn,bikr,chair,etc.
+        -> Javascript is an object-based language.Everything is an object is Javascript.
+        -> Javascript is template based not class based. Here,we dont't create class to get the object.But,we direct create objects.
+    -->
+    <!-- 
+        Create an Object using Object Literals
+    -->
+    <!-- <script>
+        var person = {
+            fname: "Ayush",
+            Age: 19,
+            lname: "Sharma",
+            colour: "White"
+        }
+    </script> -->
+
+
+    <!-- Creating an object using new Keyword(Instance of an Object) -->
+    <!-- <script>
+        var emp = new Object();
+        emp.id = 1;
+        emp.fname = "Ayush";
+        emp.lname = "Sharma";
+        for(value in emp){
+            console.log(emp[value]);
+        }
+    </script> -->
+
+
+    <!-- By using an Object Constructor as this keyword -->
+    <!-- <script>
+        // Agar hum constructor ke rup m kar rhe h to humara this keyword mandatory ho jaata hai,
+        function emp(id,name,salary){
+            this.id = id;
+            this.name = name;
+            this.salary = salary;
+        }
+        var e = new emp(2,"Ayush", 5);
+        for(value in e){
+            console.log(e[value]);
+        }
+    </script> -->
+
+
+    <!-- 
+        Updation method,
+     -->
+     <script>
+        function emp(id,name,salary){
+            this.id = id;
+            this.name = name;
+            this.salary = salary;
+
+            this.newSal = newSal;
+            function newSal(updSal) {
+                this.salary = updSal;
+            }
+        }
+        var e = new emp(2,"Ayush", 5);
+        console.log("Recent Salary is:"+ e.salary);
+        e.newSal(50000);
+        console.log("Updated Salary is:"+ e.salary);
+
+     </script>
+</body>
+</html>
