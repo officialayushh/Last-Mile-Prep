@@ -24,7 +24,7 @@
         // Creating array using Constructor
         var cars = new Array("xuv","swift","fortuner");
         for(value of cars) {
-            document.writeln(value + "<br>")
+            document.writeln(value + "<br>");
         }
 
         // Methods of Array:-
@@ -47,7 +47,7 @@
        document.writeln("<br>");
        var arrEntry = arr2.entries();
        for(value of arrEntry){
-        document.writeln(value + "<br>")
+        document.writeln(value + "<br>");
        }
        document.writeln("<br>");
        var arr3 = [50,30,20,10];
@@ -55,6 +55,12 @@
         return value>30;
        }
        document.writeln(arr3.every(check));
+       var arr4 = [11,12,[13,14]];
+       var flatarr = arr4.flat();
+       document.write(flatarr);
+       var arr5 = [2,4,6,8];
+       var total = arr5.flatMap(x => [x/2]);
+       document.write(total);
     </script>
 </body>
 </html>

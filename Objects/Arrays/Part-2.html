@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays Method-2</title>
+</head>
+<body>
+    <!-- 
+        fill()       => It fills into an array with static values
+        from()       => It creates a new array carrying the exact copy of another array element
+        filter()     => It returns the new array containing the elements that pass the provided function conditions
+        find()       => It returns the value of the first element in the given array that satisfies the specified condition 
+        findIndex()  => It returns the index value of the first element in the given array that satisfies the specified condition
+        forEach()    =>It invokes the provided function once for each element of an array
+     -->
+     <script>
+        // 1:-
+        var main = ["html","CSS","Java"];
+        var result1 = main.fill("Javascript");
+        document.write(result1);
+        document.write("<br>");
+        var result2 = main.fill("Ayush",1); //=> Here 1 is at position and add 1 or more position there,
+        document.write(result2);
+        document.write("<br>");
+        // 2:- 
+        var answer = Array.from("Hello");
+        document.write(answer);
+        document.write("<br>");
+        var func = function(){
+            document.writeln(Array.from(arg));
+        }
+        document.writeln("html","Css","Javascript");
+        document.write("<br>");
+        // 3:-
+        var a = [23,46,32,61,10,12];
+        function check(value){
+           return value>38;
+        }
+        document.write(a.filter(check));
+        document.write("<br>");
+        // 4:-
+        var findarr = a.find(x => x>30);
+        document.write(findarr);
+        document.write("<br>");
+        // 5:-
+        var findIndexArr = a.findIndex(x=> x>30);
+        document.writeln(findIndexArr);
+        document.write("<br>");
+        // 6:-
+        var value = 0;
+        a.forEach(function(fetch){
+            document.writeln(value += fetch); //Also apply operation
+        })
+     </script>
+</body>
+</html>
