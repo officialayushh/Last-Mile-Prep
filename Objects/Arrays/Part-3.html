@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays Method-3</title>
+</head>
+<body>
+    <!--
+        includes()    => It checks whether the given array contains the specified element
+        indexOf()     => It searches the specified element in the given array and returns the index of the first of the first match
+        isArray()     => It tests if the passed value is an array
+        join()        => It joins the elements of an array as a string
+        keys()        => It creates an iterator object that contains only the keys of the array,then loops through these keys
+        lastIndexOf() => It searches the specified element in the given array and the indexe of the last match
+        map()         => It calls the specified function for every array element returns the new array
+     -->
+     <script>
+        //1 :- 
+        var a = ["C","C++","Java","Javascript"];
+        document.writeln(a.includes("Java"));
+        document.writeln("<br>");
+        // 2 :-
+        document.writeln(a.indexOf("C++"));
+        document.write("<br>")
+        // 3 :- Array hai ya nahi h batyega,
+        // 4:-
+        document.writeln(a.join(","));
+        document.write("<br>");
+        // 5:-
+        var keyArr = a.keys();
+        document.writeln(keyArr + "<br>");
+        document.writeln("Values of Key Will be :-" + "<br>");
+        for(value of keyArr) {
+            document.writeln(value+"<br>")
+        }
+        // 6:-
+        document.writeln(a.lastIndexOf("Java"));
+        // 7 :-
+        var b = [0,4,9,1,6];
+        var mapArr = b.map(x => x/2);
+        document.write(mapArr);
+     </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays Method-5</title>
+</head>
+<body>
+    <!-- 
+        sort()            => It returns the element of the given array in a sorted order,Value becomes decrease to incerase
+        splice()          => It Add/remove elements to/from the given array
+        toLocaleString()  => It returns a string containing all the elements of a specified array
+        toString()        => It converts the elements of a specified array into string form,without affecting the original array
+        unshift()         => It adds one or more elements in the beginning of the given array
+        values()          => It creates a new iterator object carrying values for rach in the array
+     -->
+    <script>
+        // 1:-
+        var arr = [8,6,4,2,9];
+        document.write("The maximum number from array" + arr);
+        var result = arr.sort();
+        document.write("is" + result[0]);
+        document.write
+        // 2:- array.splice(start,delete,...element)
+        var weekday = ["Sunday","Monday","Tuesday","Thursday"];
+        var add = weekday.splice(3,0,"Wednesday");
+        document.writeln("<br>" + "Weekdays:"+ weekday);
+        var week = ["Monday","Tuesday","Sunday","Wednesday"];
+        var move = week.splice(2,1);
+        document.write("<br>"+ week);
+        // 3:-
+        var main = ["Sun","Mon","Tue","Wed"];
+        var str = main.toLocaleString();
+        document.writeln("<br>"+str);
+        console.log(str); 
+        // But we need to work with date and objects so use local string and in object also covert in string
+
+        // =>
+        var arr2 = ['a',1,new Date('6 Dec 2002 23:30:00')];
+        var str = arr2.toLocaleString('em',{timezone:"UTC"});
+        console.log(str);
+        // 4:-
+        // To simple covert an array we use toString
+        // 5:-
+        var num1 = [1,4,7];
+        var num2 = num1.unshift(9);
+        document.writeln("<br>"+ num2);
+        document.writeln("<br>"+ num1);
+        // 6:-
+        var valuesarr = weekday.values();
+        console.log(valuesarr); //Also do this using for of loop
+        document.writeln("<br>"+ valuesarr.next().value + "<br>")
+        document.writeln("<br>"+ valuesarr.next().value + "<br>")
+        document.writeln("<br>"+ valuesarr.next().value + "<br>")
+    </script>
+</body>
+</html>
