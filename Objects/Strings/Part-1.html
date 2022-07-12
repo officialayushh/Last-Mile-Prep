@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Method-1</title>
+</head>
+<body>
+    <!-- 
+        charAt()       => It provides the char value present at the specified index
+        charCodeAt()   => It Provides the Unicode value of a character present at the specified index
+        concat()       => It provides a combination of two or more strings
+        indexOf()      => It provides the position of a char value present in the given string
+        lastIndexOf()  => It provides the position of a char value present in the given string by searching a character from the lat position
+        search()       => It searches a specified regular expressionn in a given string as returns its position if a match occurs
+        match()        => It searches a specified regular experession in a given string returns that regular expression if a match occurs
+     -->
+     <script>
+        // 1:-
+        var str = "Ayush is a good";
+        var str1 = "Yeahh fine";
+        var str2 = "Sure";
+        document.write(str.charAt(2));
+        // 2:-
+        document.write("<br>"+str.charCodeAt(2));
+        // 3:-
+        document.writeln("<br>"+str.concat(str1,str2));
+        // 4:-
+        document.write("<br>"+str1.indexOf("Y")); //Also we give any start point and point there to remove this positions
+        // 5:-
+        document.write("<br>"+str1.lastIndexOf("f")); //Also we give any start point and point there to remove this positions
+        // 6:-
+        var str4 = "Nature is a good thing in this world"
+        document.writeln("<br>"+str4.search("world"));
+        document.writeln("<br>"+str4.search(/World/i)); //Meaning of this is case sensitivity ignore
+        // 7:-
+        document.writeln("<br>" + str4.match("Nature"));
+     </script>
+</body>
+</html>

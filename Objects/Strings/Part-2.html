@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Method-2</title>
+</head>
+<body>
+    <!-- 
+        replace()             => It replaces a given string with the specified replacement
+        substr()              => It is used to fetch the part of the given string on the basis of the specified starting position and length
+        substring()           => It is used to fetch the part of the given string on the basis of the specified index
+        slice()               => It is used to fetch the part of the given string.It allows us to assign positive as well negative index
+        toLowerCase()         => It coverts the given string into lowercase letter.
+        toLocaleLowerCase()   => It converts the given string into lowercase letter on host?s curent locale
+        toLocalUpperCase()    => It converts the given string into Uppercase letter on host?s curent locale
+        toString()            => It provides a string representing the particular object
+        valueOf()             => It provides the primitive value of string object
+        split()               => It splits a string into substring array, then returns that newly created array
+        trim()                => It trims the white space from the left and right side of the string
+     -->
+     <script>
+        // 1:-
+        let str = "Welcome to my world";
+        document.write(str.replace("world","nature"));
+        // 2:-
+        document.write("<br>"+str.substr(10,18));
+        document.write("<br>"+str.substr(10));
+        document.write("<br>"+str.substr());
+        // 3:-
+        document.write("<br>"+str.substring(10,18));
+        document.write("<br>"+str.substring(10));
+        document.write("<br>"+str.substring());
+        // 4:-
+        document.write("<br>"+str.slice(14,20))
+        // 5:-
+        var strname = "AYUSH IS A GOOD BOY";
+        document.writeln("<br>"+strname.toLowerCase());
+        // 6:-
+        document.writeln("<br>"+strname.toLocaleLowerCase());
+        // 7:-
+        // Same as local case upper case is also available to that,
+        // 8:-
+        document.writeln("<br>"+ strname.toString());
+        // 9:-
+        var str5 = "Hii bro how are you";
+        document.writeln("<br>"+ str5.valueOf());
+        // 10:-
+        // Split m space gayb ho jayega har jagah se or comma aa jayega
+        // 11:-
+        // Trim method is used to remove whitespaces.
+     </script>
+</body>
+</html>
