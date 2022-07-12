@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Objects</title>
+</head>
+<body>
+    <!-- 
+        => The Js number object enables you to represent a numeric value.
+        It may be integer or floating-point.Js number follows IEEE standard to represent
+        the floating-point numbers.
+        => By the help of Number() constructor,you can create number object in Javascript.
+        Methods:-
+        isFinite()        => It determines whether the given value is a finite number
+        isInteger()       => It determines whether the given value is an integer
+        parseFloat()      => It converts the given string into a floating point number
+        parseInt()        => It converts the given string into an integer number
+        toExponential()   => It returns the string that represents exponential notation of the given number
+        toFixed()         => It returns the string that represents a number with exact digits after a decimal point
+        toPrecision()     => It returns the string representing a number of specified
+        toString()        => It returns the given number in the form of string
+     -->
+     <script>
+        var x = 2;
+        var y = 2.785;
+        var z = 45e2;
+        var a = new Number(16);
+        document.writeln("Javascript Constants"+"<br>")
+        document.writeln("Minimum number in Javascript:"+Number.MIN_VALUE+"<br>");
+        document.writeln("Maximum number in Javascript:"+Number.MAX_VALUE+"<br>");
+        document.writeln("Positive number in Javascript:"+Number.POSITIVE_INFINITY+"<br>");
+        document.writeln("Negative number in Javascript:"+Number.NEGATIVE_INFINITY+"<br>");
+        document.writeln("Nan in Javascript:"+Number.isNaN('g')+"<br>");
+        // 1 => for passing number only that is finite nan and char is not,
+        // 2 => only number allow other as infinity ,minus infinity and NAN is not allowed
+        // 3 => float to get number as datatype
+        // 4 => int to get number as datatype
+        // 5 => a.toExponential(2); a is any number and inside 2 is base number
+        // 6 => Math.PI.toFixed(2); //Only get 2 values after decimal used.
+        // 7 => Math.PI.toPrecision(2); //First output string m milta h and second jitna no. baadaoge utne decimal deta jayega
+        // 8 => covert number to string
+     </script>
+</body>
+</html>
