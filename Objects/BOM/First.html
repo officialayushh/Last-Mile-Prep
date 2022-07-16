@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM</title>
+</head>
+<body>
+    <!-- 
+        BOM:-
+        Window Object:-
+        1.Document
+        2.History
+        3.Location
+        4.Navigator:-
+        appname         =>returns the name
+        appVersion      =>returns the version
+        appCodeName     =>returns the code name
+        cookieEnabled   =>returns true if cookie is enabled otherwise false
+        userAgent       =>returns the user agent
+        language        =>returns the language.It is supported in Netscape and firefox only
+        userLanguage    =>returns the user langauge. It is supported in IE only
+        plugins         =>returns the plugins. It is supported in Netscape and Firefox only
+        systemLanguage  =>returns the system language.It is supported in IE only
+        mimeTypes[]     =>returns the array of mime type. It is supported in Netscape and firefox only
+        5.Screen:-
+        width       => returns the width of the screen
+        height      => returns the height of the screen
+        availWidth  => returns the available width
+        availHeight => returns the available height
+        colorDepth  => returns the color depth
+        pixelDepth  => returns the pixel depth
+
+        Methods of window object
+        alert()       => Displays the alert box containing message with ok button
+        confirm()     => Displays the confirm dialog box containing message with ok and cancel button
+        prompt()      => Displays a dialog box to get input form the user
+        open()        => opens the new window
+        close()       => closes the current window
+        setTimeout()  => performs action after specified time like calling function,evaluating expression etc.
+     -->
+     <script>
+        // 1. Ok option only
+        // 2. Ok cancel two option
+        // 3. Inpur box to type anything
+        // 4. Inside open type any website
+        // 5. 
+        // 6. Example:-
+        // setTimeout(
+            // function(){
+                // alert("Hi This side ayush");
+            // },2000);
+
+
+            // 2:- format is same as navigator
+        // history.length using know the history of your browser
+        // history.back()
+        // history.forward()
+        // function functionGo(){
+            // history.go(-2)
+        // }
+        // 4:- Depend upon Browser
+        document.writeln("Navigator Properties");
+        document.writeln("<br>"+navigator.appName +"<br>");
+        document.writeln("<br>"+navigator.appVersion +"<br>");
+        document.writeln("<br>"+navigator.appCodeName +"<br>");
+        document.writeln("<br>"+navigator.cookieEnabled +"<br>");
+        document.writeln("<br>"+navigator.userAgent +"<br>");
+        document.writeln("<br>"+navigator.language +"<br>");
+        document.writeln("<br>"+navigator.userLanguage +"<br>");
+        document.writeln("<br>"+navigator.plugins +"<br>");
+        document.writeln("<br>"+navigator.systemLanguage +"<br>");
+        document.writeln("<br>"+navigator.mimeTypes +"<br>");
+        document.writeln("<br>"+navigator.platform +"<br>");
+        document.writeln("<br>"+navigator.onLine +"<br>");
+     </script>
+</body>
+</html>
