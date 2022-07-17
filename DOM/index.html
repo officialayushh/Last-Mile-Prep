@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+</head>
+<body>
+    <form name="form1">
+
+        <!-- <input type="text" name="name"> -->
+        <button onclick="showMe()">Click</button>
+        <div type="text" class="abc">1st</div>
+        <div type="text" class="abc">2nd</div>
+
+    </form>
+    <!-- 
+        Methods:-
+        write("string")         =>writes the given string one the document
+        writeln("string")       =>writes the given string one the document with newline character at the end
+        getElementById()        =>returns the element having the given id value
+        getElementsByName()     =>returns all the elements having the given name value
+        getElementsByTagName()  =>returns all the elements having the given tag name
+        getElementsByClassName()=>returns all the elements having the given class name
+     -->
+    <script>
+        function showMe() {
+            // var main = document.form1.name.value;
+            // alert(main);
+            var x = document.getElementsByClassName('abc');
+            alert(x[0].innerHTML);
+        }
+        // default value tag also available,
+    </script>
+</body>
+</html>

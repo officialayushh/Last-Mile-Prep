@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Form validator</title>
+</head>
+<body>
+    <form name="myForm" method="post" onsubmit="return validateForm()">
+        <input type="text" name="email" placeholder="Enter Your Email">
+        <input type="submit" value="submit">
+    </form>
+    <!-- 
+        Assignment:-
+        Q.1. Write a js program nad add a form and add fields as shown below:
+        i)-  First Name
+        ii)- Last Name
+        iii)-Email
+        iv)- Telephone Number
+        v)-  Password
+        vi)- Confirm Password
+        vii)-Submit button
+        Make sure to apply appropriate validation on each of the field that will trigger submit button click
+     -->
+    <script>
+        function validateForm() {
+            var email = document.myForm.email.value;
+            var atposition = email.indexOf('@');
+            var dotposition = email.indexOf('.');
+            if(atposition<1||dotposition<atposition+2||dotposition+2>=email.length){
+                alert("Email is not Correct");
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>
