@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class - OOPS's</title>
+</head>
+
+<body>
+    <!-- 
+        1.Class declarations
+        2.Class experessions
+    -->
+    <script>
+        // 1:-
+        // Hoisitng,Redclaration are not supporteed in class
+        class Employee {
+            constructor(id, name) {
+                this.id = id;
+                this.name = name;
+            }
+            details() {
+                document.writeln(this.id + " " + this.name);
+            }
+        }
+        // class Employee {
+            
+        // }
+        var obj1 = new Employee(1, "Ayush");
+        obj1.details();
+        var obj2 = new Employee(2, "Sharma");
+        obj2.details();
+
+        // 2:-
+        // Another way to define a class is by using a class expression.Here,
+        // it is not mandatory to assign the name of the class.
+        // i)- UnNamed Class Expression
+        var abc = class{
+            constructor(id,name){
+                this.id = id;
+                this.name = name;
+            }
+        }
+        document.writeln(abc.name);
+        document.writeln(abc.id);
+        document.writeln("<br>");
+        // ii)- RE-Declaring class are possible there
+        var emp = class{
+            constructor(id,name){
+                this.id = id;
+                this.name = name;
+            }
+            details(){
+                document.writeln(this.id+" "+this.name+"<br>")
+            }
+        }
+        var o1 = new emp(1,"Abc");
+        o1.details();
+
+        var o1 = new emp(2,"xyz");
+        o1.details();
+
+        var emp = class{
+            constructor(id,name){
+                this.id = id;
+                this.name = name;
+            }
+            details(){
+                document.writeln(this.id+" "+this.name+"<br>")
+            }
+        }
+        var o1 = new emp(3,"ayu");
+        o1.details();
+
+        var o1 = new emp(4,"sh");
+        o1.details();
+
+        // iii)- Named Class experession
+        var abc = class Emp{
+            constructor(id,name){
+                this.id = id;
+                this.name = name;
+            }
+        }
+        document.writeln(abc.name);
+        document.writeln(Emp.name);
+
+        // Javascript supports hositing but class not supports
+        // Hoisting
+        // Function hoisting
+        // catName("Tiger");
+          // function catName(name) {
+        //   console.log("My cat's name is " + name);
+        // }
+        // variable hoisting
+        // console.log(num);
+        // var num = 6; 
+        // console.log(num); 
+        // a = 99;
+        // var a;
+
+
+    </script>
+</body>
+
+</html>
