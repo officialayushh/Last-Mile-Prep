@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype</title>
+</head>
+<body>
+    <!--
+        Q.1. What is prototype and why we need of us ?
+        => In a prototype-based approach,all the objects share the same function.This ignores the
+        requirement of creating a new copy of function for each object.Thus,the functions are loaded 
+        once into the memory.
+
+        Javascript is a prototype-based language that facilitates the objects to acquire 
+        properties and features from one another.Here,each object contains a prototype object
+        Used:-
+        In Js, whenever a function is created the prototype property is added to that function automatically
+        This property is a prototype object that holds a constructor property.
+
+        Q.2. Prototype Chaining:-
+        Each object contains a prototype object that acquires properties and methods from it
+        Again an object's prototype object may contain a prototype object that also acquires properties and methods,and so on.
+        It can be seen as prototype chaining.
+
+        Syntax:
+        ClassName.prototype.methodName
+    -->
+    <script>
+        function Employee(fname,lname){
+            this.fname = fname;
+            this.lname = lname;
+        }
+        // Employee.prototype.fullName = function(){
+        //     return this.fname+" "+this.lname;
+        // }
+        // Suppose i want to add property there:-
+        Employee.prototype.company = "Javascript";
+        var emp1 = new Employee("Ayush","Saraswat");
+        var emp2 = new Employee("Shivam","Kumar");
+        // document.writeln(emp1.fullName() + "<br>");
+        // document.writeln(emp2.fullName() + "<br>");
+        document.writeln(emp1.fname+" "+emp1.lname+" "+emp1.company+"<br>");
+        document.writeln(emp2.fname+" "+emp2.lname+" "+emp2.company+"<br>");
+    </script>
+</body>
+</html>

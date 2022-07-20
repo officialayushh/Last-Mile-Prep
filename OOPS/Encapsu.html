@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encapsulation in Javascript</title>
+</head>
+<body>
+    <!-- 
+        Very Important Topic Encapsulation:-
+
+        => The javascript Encapsulation is a process of binding the data(variables) with the functions 
+        acting on that data
+        => It allows us to control the data and validate it.To achieve an encapsulation in JavaScript:-
+        1.Use var keyword to make data members private.
+        2.Use setter methos to set the data and getter methods to get that data
+
+        Encapsulation allows us to handle an object using the following properties:
+        1.Read/Write - Here, we use setter methods to write the data and getter methods read the data
+        2.Read only - In this case,we use getter methods only
+        3.Write Only- In this case,we use setter methods only
+
+        Agar hum chahte h ki humara jo data(varibale) h vo sirf class k andar hi accessible ho
+        to hum usse private rakhte h or agar hum chahte h ki vo class k bhar bhi accessible ho
+        to hum usse public rakhenge,But public private is not available in js so diffeent method to define variable,
+    -->
+    <script>
+        // Using getter and setter:-
+        // Using getter make object and using setter make values,
+        // Example:1- Encapsulation Method
+        // class Student{
+        //     constructor(){
+        //         var name;
+        //         var marks;
+        //     }
+        //     getName(){
+        //         return this.name;
+        //     }
+        //     setName(name){
+        //         this.name = name;
+        //     }
+        //     getMarks(){
+        //         return this.marks;
+        //     }
+        //     setMarks(marks){
+        //         this.marks = marks;
+        //     }
+        // }
+        // var stud = new Student();
+        // stud.setName("Joel");
+        // stud.setMarks(20);
+        // document.writeln(stud.getName()+" has secured "+stud.getMarks());
+
+        // Example:2- Prototype-based approach
+
+        function Student(name,marks){
+            var sname = name; //for making private we use var,
+            var smarks = marks;
+            Object.defineProperty(this,"name",{
+                get:function(){
+                    return sname;
+                },
+                set:function(sname){
+                    this.sname = sname;
+                }
+            });
+
+            Object.defineProperty(this,"marks",{
+                get:function(){
+                    return smarks;
+                },
+                set:function(smarks){
+                    this.smarks = smarks;
+                }
+            });
+        }
+
+        var stud = new Student("Joel",20);
+        document.writeln(stud.name + " has secured "+stud.marks);
+
+    </script>
+</body>
+</html>

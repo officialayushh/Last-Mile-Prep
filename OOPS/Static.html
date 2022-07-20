@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript-Static Method</title>
+</head>
+<body>
+    <!-- 
+        The Js provides static methods that belong to the class instead of an instance of that class,
+        So,an instance is not required to call the static method.These Methods are called
+        directly on the class itself,
+
+        Points:-
+        1.If we declare more than one static method with a similar name,the javascript always invokes last one
+        2.The static method can be used to create utility functions 
+        => Utility method => Code once and use again and again, 
+        3.We can use this keyword to call a static method within anothrt static method
+        4.We cannot use this keyword directly to call a static method within the non-static method.
+        In such case,we can call the static method either using the class name or as the property of the constructor.
+        5. The static keyword is used to declare a static method.
+        6. The static method can be of any name.
+        7. A class can contain more than one static method
+     -->
+     <script>
+        // Example:1-
+        // class Test{
+        //     static display(){
+        //         return "STATIC";
+        //     }
+        // }
+        // document.writeln(Test.display());
+
+        // Example:2- One more static method
+        // class Test{
+        //     static display(){
+        //         return "STATIC";
+        //     }
+        //     static display1(){
+        //         return "Again Static";
+        //     }
+        // }
+        // document.writeln(Test.display() + "<br>");
+        // document.writeln(Test.display1() + "<br>");
+
+        // Example:3-
+        // class Test{
+        //     static display(){
+        //         return "STATIC";
+        //     }
+        //     static display(){
+        //         return "Again Static";
+        //     }
+        // }
+        // document.writeln(Test.display() + "<br>");
+        
+        // Example:4-
+        // class Test{
+        //     constructor(){
+        //         document.writeln(Test.display() + "<br>");
+        //         document.writeln(this.constructor.display());
+        //     }
+        //     static display(){
+        //         return "Again Static";
+        //     }
+        // }
+        // var t = new Test();
+
+        // Example:5-
+        class Test{
+            static display(){
+                return "Static";
+            }
+            show(){
+                document.writeln(Test.display() + "<br>");
+                return "No-Static";
+            }
+        }
+
+        var t = new Test();
+        t.show();
+
+     </script>
+</body>
+</html>

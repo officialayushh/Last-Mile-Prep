@@ -49,3 +49,14 @@ const myFunction = arr => {
     return arr.map(x => x+3).filter(x => x<7);
 }
 console.log(myFunction(my))
+
+
+//"this is a simple problem";
+        function vowel(str){
+            const total =str.match(/[aeiou]/).length;
+            return total;
+        }
+         const final = vowel("this is a simple problem");
+         console.log(final);
+        // vowel().then((res) => {
+        // }).catch(())

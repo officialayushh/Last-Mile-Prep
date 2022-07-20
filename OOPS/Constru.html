@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js- Constructor Method</title>
+</head>
+<body>
+    <!-- 
+        A Js constructor method is a special type of method which is used to 
+        intialize and create an object.It is called when memory id allocated for an object.
+
+        Points to remember:-
+        1.The constructor keyword is used to declare a constructor method
+        2.The class can contain one constructor method only
+        3.JS allows us to use parent class constructor through super keyword
+    -->
+    <script>
+        // Constructor is used without parameter and with parameter
+        // When we use super()=>
+        // Jab bhi hume parent class ka koi object create karna hota h,ya parent class ka constructor call
+        // karna hota h to hum super ka use karte hai,
+        // extend as as behalf of class use in js and java and c++ => Child Class
+                                                                        // |
+                                                                        // /\
+                                                // Access Parent Child Class Access parent class property
+        // class Employee{
+        //     constructor(){
+        //         this.id = 100;
+        //         this.name = "Ayush";
+        //     }
+        // }
+        // var emp = new Employee();
+        // document.writeln(emp.id + " "+emp.name);
+
+        // For super
+        // Parent Class
+        class CompanyName{
+            constructor(){
+                this.companyName = "React";
+            }
+        }
+        // Child Class
+        class Employee extends CompanyName{
+            constructor(id,name){
+                super(); //super this se pehle hi likh sakte h bas badme nahi karenge,
+                this.id = id;
+                this.name = name;      
+            }
+        }
+        var emp = new Employee(1,"Ayush");
+        document.writeln(emp.id+" "+emp.name+" "+emp.companyName);
+    </script>
+</body>
+</html>
